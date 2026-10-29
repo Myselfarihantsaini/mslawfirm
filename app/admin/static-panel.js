@@ -51,13 +51,13 @@ export default function StaticPanel(){
       setMessage('Judgment saved. The live website will update after its deployment completes, usually within a few minutes.');
     }catch(error){setMessage(error.message);}finally{setBusy(false);}
   }
-  const field=(name,label,type='text')=><label key={name}>{label}<input type={type} required value={post[name]} onChange={e=>setPost({...post,[name]:e.target.value})}/></label>;
+  const field=(name,label,type='text')=><label key={name}>{label}<input type={type} required={name!=='sourceUrl'} value={post[name]} onChange={e=>setPost({...post,[name]:e.target.value})}/></label>;
   return <div className="judgment-workspace">
     <p>Write, preview and publish judgments here. Published posts appear in the website’s Judgments section.</p>
     {message&&<p role="status" className="editor-message">{message}</p>}
     <form onSubmit={publish}>
       <div className="editor-fields">
-        {field('title','Post title')}{field('court','Court')}{field('date','Decision date','date')}{field('citation','Citation')}{field('sourceUrl','Official judgment link','url')}{field('author','Author')}
+        {field('title','Post title')}{field('court','Court')}{field('date','Decision date','date')}{field('citation','Citation')}{field('sourceUrl','Official judgment link (optional)','url')}{field('author','Author')}
       </div>
       <label>Summary<textarea required rows={3} value={post.summary} onChange={e=>setPost({...post,summary:e.target.value})}/></label>
       <label>Article<textarea required rows={14} value={post.body} onChange={e=>setPost({...post,body:e.target.value})}/></label>
