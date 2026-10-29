@@ -1,0 +1,22 @@
+{
+  "name": "yogya-law-chambers",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build --webpack",
+    "start": "next start --hostname 127.0.0.1",
+    "test": "node checks/enquiry.mjs"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "latest",
+    "better-sqlite3": "^13.0.3",
+    "google-auth-library": "^11.3.2",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "tailwindcss": "latest",
+    "sharp": "0.35.5"
+  },
+  "type": "module"
+}

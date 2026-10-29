@@ -1,0 +1,4 @@
+import {cookies} from 'next/headers';
+import {randomBytes,createHash} from 'node:crypto';
+import {google,ready} from '../../../lib/google';
+export async function GET(){if(!ready())return Response.redirect(new URL('/admin?auth=setup',process.env.GOOGLE_REDIRECT_URI||'http://127.0.0.1:3000'),303);const state=randomBytes(32).toString('hex'),verifier=randomBytes(32).toString('base64url');const jar=await cookies();const options={httpOnly:true,sameSite:'lax',secure:process.env.NODE_ENV==='production',path:'/api/auth/google',maxAge:600};jar.set('google-state',state,options);jar.set('google-verifier',verifier,options);return Response.redirect(google().generateAuthUrl({scope:['openid','email'],state,prompt:'select_account',code_challenge:createHash('sha256').update(verifier).digest('base64url'),code_challenge_method:'S256'}),303)}

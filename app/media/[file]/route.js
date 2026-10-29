@@ -1,0 +1,2 @@
+import {readFile} from 'node:fs/promises';
+export async function GET(req,{params}){const {file}=await params;if(!/^[a-f0-9-]{36}\.webp$/.test(file))return new Response(null,{status:404});try{return new Response(await readFile('data/uploads/'+file),{headers:{'Content-Type':'image/webp','Cache-Control':'public, max-age=86400','X-Content-Type-Options':'nosniff'}})}catch{return new Response(null,{status:404})}}

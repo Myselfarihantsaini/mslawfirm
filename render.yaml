@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: ms-advocates
+    runtime: node
+    plan: starter
+    buildCommand: npm ci && npm run build
+    startCommand: npx next start --hostname 0.0.0.0 --port $PORT
+    healthCheckPath: /
+    disk:
+      name: practice-data
+      mountPath: /opt/render/project/src/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_VERSION
+        value: 24
+      - key: NEXT_PUBLIC_SITE_URL
+        value: https://msadvocates.co.in
+      - key: GOOGLE_REDIRECT_URI
+        value: https://msadvocates.co.in/api/auth/google/callback
+      - key: ADMIN_GOOGLE_EMAILS
+        value: msadvocates.legal@gmail.com
+      - key: ADMIN_SECRET
+        generateValue: true
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: GOOGLE_CLIENT_SECRET
+        sync: false

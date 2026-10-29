@@ -1,0 +1,5 @@
+import {authorised} from '../../../lib/admin-auth';
+import {mkdir,writeFile} from 'node:fs/promises';
+import {randomUUID} from 'node:crypto';
+import sharp from 'sharp';
+export async function POST(req){if(!await authorised())return new Response(null,{status:401});if(!req.headers.get('origin')||new URL(req.headers.get('origin')).host!==req.headers.get('host'))return new Response(null,{status:403});if(Number(req.headers.get('content-length'))>6000000)return new Response(null,{status:413});try{const file=(await req.formData()).get('file');if(!file||file.size>5000000||!['image/png','image/jpeg','image/webp'].includes(file.type))return Response.json({error:'Choose a PNG, JPG or WebP under 5 MB.'},{status:400});const image=await sharp(Buffer.from(await file.arrayBuffer()),{limitInputPixels:25000000}).rotate().resize({width:1600,withoutEnlargement:true}).webp({quality:85}).toBuffer();await mkdir('data/uploads',{recursive:true});const name=randomUUID()+'.webp';await writeFile('data/uploads/'+name,image);return Response.json({url:'/media/'+name})}catch{return Response.json({error:'The image could not be processed.'},{status:400})}}

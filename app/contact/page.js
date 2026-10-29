@@ -1,0 +1,4 @@
+import {firm} from '../content';
+import Form from './form';
+export const metadata={title:'Contact the Practice'};
+export default function Contact(){return <main id="main" className="section"><p className="eyebrow">PROFESSIONAL ENQUIRIES</p><h1 className="page-title">Contact the Practice</h1><div className="contact-grid"><div><h2>Adv. Bhavesh Saini</h2><p>MS Advocates & Solicitors</p><a href={'mailto:'+firm.email}>{firm.email}</a><p><a href="tel:+918168814917">+91 81688 14917</a><br/><a href="tel:+919812827624">+91 98128 27624</a></p><p className="muted">Contact information supplied on the advocate’s card. Office address and hours will be added following confirmation.</p></div><div><h2>General enquiry</h2><p>Please share a brief, general description. Do not include confidential information or case documents.</p><Form enabled={true}/><a className="text-link" href="/privacy-policy">How enquiries are handled ↗</a></div></div></main>}
