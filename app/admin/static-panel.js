@@ -14,7 +14,7 @@ export default function StaticPanel(){
         <section>
           <h2>Judgment Publishing</h2>
           <p style={{color:'#556170', marginBottom:'24px'}}>
-            Judgments are published with automatic verification, citation linking, and structured editorial formatting.
+            Write and review case notes in GitHub. Approved posts are automatically published with their supplied citations and source links.
           </p>
 
           <div style={{display:'flex', flexDirection:'column', gap:'16px', alignItems:'flex-start'}}>
@@ -44,9 +44,9 @@ export default function StaticPanel(){
             <ol style={{paddingLeft:'20px', lineHeight:'2', color:'#455160'}}>
               <li>Click <strong>Publish New Judgment</strong> to open the structured template.</li>
               <li>Fill in the Court, Decision Date, Citation, Official Source URL, Summary, and Article text.</li>
-              <li>Ensure the <code>judgment</code> label is attached (included by default).</li>
-              <li>Click <strong>Submit new issue</strong>. GitHub Actions automatically rebuilds and deploys the live case note in ~60 seconds.</li>
-              <li>To update or correct text, edit the issue. To unpublish or archive, remove the <code>judgment</code> label or close the issue.</li>
+              <li>Check the publication approval box only after reviewing the post.</li>
+              <li>Click <strong>Submit new issue</strong>. GitHub Actions automatically rebuilds and deploys the live case note after a successful deployment.</li>
+              <li>To update or correct text, edit the issue. To unpublish or archive, uncheck publication approval or close the issue.</li>
             </ol>
           </div>
         </section>

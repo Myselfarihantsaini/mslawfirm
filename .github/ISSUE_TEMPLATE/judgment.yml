@@ -1,11 +1,10 @@
 name: Publish a judgment
-description: Write a judgment post; publish it by adding the judgment label.
+description: Write a judgment post; publish it using the approval checkbox.
 title: "Judgment: "
-labels: ["judgment"]
 body:
   - type: markdown
     attributes:
-      value: "Fill out the fields below. Once submitted with the 'judgment' label, GitHub Actions will automatically rebuild and publish the case note to msadvocates.co.in. To unpublish, close the issue or remove the 'judgment' label."
+      value: "Fill out the fields below. Check the publication approval box when ready to publish. Close the issue or uncheck the box to unpublish."
   - type: input
     id: court
     attributes:
@@ -57,3 +56,9 @@ body:
       placeholder: Write the full case note here. Separate paragraphs with a blank line.
     validations:
       required: true
+  - type: checkboxes
+    id: publication
+    attributes:
+      label: Publication approval
+      options:
+        - label: I have reviewed this post and approve publication on the website.

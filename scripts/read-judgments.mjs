@@ -20,28 +20,13 @@ export function parseJudgment(issue){
   };
 }
 
+export function isPublished(issue){return !issue.pull_request&&['OWNER','MEMBER','COLLABORATOR'].includes(issue.author_association)&&/^Judgment:/i.test(issue.title||'')&&(/- \[x\] I have reviewed this post and approve publication on the website\./i.test(issue.body||'')||issue.labels?.some(l=>l.name==='judgment'))}
 export async function readJudgments(){
-  if(!process.env.GH_TOKEN || !process.env.GH_REPOSITORY) return [];
-  let posts=[];
-  try{
-    for(let page=1;;page++){
-      const r=await fetch(`https://api.github.com/repos/${process.env.GH_REPOSITORY}/issues?state=open&labels=judgment&per_page=100&page=${page}`,{
-        headers:{
-          Authorization:`Bearer ${process.env.GH_TOKEN}`,
-          Accept:'application/vnd.github+json',
-          'User-Agent':'msadvocates-build'
-        }
-      });
-      if(!r.ok){
-        console.warn('GitHub issues fetch notice:', r.status, await r.text());
-        return posts;
-      }
-      const rows=await r.json();
-      posts.push(...rows.filter(i=>!i.pull_request&&['OWNER','MEMBER','COLLABORATOR'].includes(i.author_association)).map(parseJudgment).filter(Boolean));
-      if(rows.length<100) break;
-    }
-  }catch(err){
-    console.warn('Error loading judgment posts from GitHub:', err.message);
-  }
-  return posts;
+ if(!process.env.GH_TOKEN||!process.env.GH_REPOSITORY)return [];
+ const posts=[];
+ for(let page=1;;page++){
+ const r=await fetch(`https://api.github.com/repos/${process.env.GH_REPOSITORY}/issues?state=open&per_page=100&page=${page}`,{headers:{Authorization:`Bearer ${process.env.GH_TOKEN}`,Accept:'application/vnd.github+json','User-Agent':'msadvocates-build'}});
+ if(!r.ok)throw Error('Judgment retrieval failed; previous deployment is preserved.');
+ const rows=await r.json();posts.push(...rows.filter(isPublished).map(parseJudgment).filter(Boolean));if(rows.length<100)break;
+ }return posts;
 }

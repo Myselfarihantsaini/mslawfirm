@@ -1,0 +1,4 @@
+import assert from 'node:assert/strict';
+import {parseJudgment,isPublished} from '../scripts/read-judgments.mjs';
+const issue={number:1,title:'Judgment: Sample',author_association:'OWNER',created_at:'2026-10-30',body:'### Court\nExample court\n### Official judgment URL\nhttps://example.org/case\n### Summary\nExample summary\n### Article\nParagraph one\n\nParagraph two\n### Publication approval\n- [x] I have reviewed this post and approve publication on the website.'};
+assert(isPublished(issue));assert(!isPublished({...issue,author_association:'NONE'}));assert(!isPublished({...issue,body:issue.body.replace('[x]','[ ]')}));assert.equal(parseJudgment(issue).title,'Sample');assert.equal(parseJudgment({...issue,body:'### Official judgment URL\njavascript:alert(1)'}),null);console.log('Judgment publication and parsing checks passed.');
