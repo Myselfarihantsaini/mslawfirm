@@ -2,9 +2,12 @@ name: Publish public website
 on:
   push:
     branches: [main]
+  issues:
+    types: [opened, edited, labeled, unlabeled, closed, reopened]
   workflow_dispatch:
 permissions:
   contents: read
+  issues: read
   pages: write
   id-token: write
 concurrency:
@@ -23,6 +26,8 @@ jobs:
       - uses: actions/configure-pages@v5
       - run: node scripts/build-pages.mjs
         env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPOSITORY: ${{ github.repository }}
           PAGES_BASE_PATH: ''
       - uses: actions/upload-pages-artifact@v3
         with:

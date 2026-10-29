@@ -1,0 +1,59 @@
+name: Publish a judgment
+description: Write a judgment post; publish it by adding the judgment label.
+title: "Judgment: "
+labels: ["judgment"]
+body:
+  - type: markdown
+    attributes:
+      value: "Fill out the fields below. Once submitted with the 'judgment' label, GitHub Actions will automatically rebuild and publish the case note to msadvocates.co.in. To unpublish, close the issue or remove the 'judgment' label."
+  - type: input
+    id: court
+    attributes:
+      label: Court
+      placeholder: e.g. Supreme Court of India / High Court of Punjab and Haryana
+    validations:
+      required: true
+  - type: input
+    id: decision-date
+    attributes:
+      label: Decision date
+      placeholder: YYYY-MM-DD
+    validations:
+      required: true
+  - type: input
+    id: citation
+    attributes:
+      label: Citation
+      placeholder: e.g. (2024) 4 SCC 512
+    validations:
+      required: true
+  - type: input
+    id: author
+    attributes:
+      label: Author
+      placeholder: Adv. Bhavesh Saini
+      value: Adv. Bhavesh Saini
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Official judgment URL
+      placeholder: https://
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      placeholder: Brief executive summary of the legal ratio and context.
+    validations:
+      required: true
+  - type: textarea
+    id: article
+    attributes:
+      label: Article
+      description: Plain text commentary with blank lines between paragraphs.
+      placeholder: Write the full case note here. Separate paragraphs with a blank line.
+    validations:
+      required: true
