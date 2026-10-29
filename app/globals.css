@@ -462,8 +462,3 @@ footer a {
 
 .judgment-workspace{max-width:960px;margin:2rem auto}.judgment-workspace label{display:block;font-size:17px;margin:1rem 0;color:#10283f}.judgment-workspace input,.judgment-workspace textarea{display:block;width:100%;box-sizing:border-box;padding:14px;margin-top:8px;border:1px solid #c8c7c1;background:#fff;color:#252d35;font:inherit;line-height:1.6}.editor-fields{display:grid;grid-template-columns:1fr 1fr;gap:0 24px}.editor-actions{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0}.editor-connection{padding:24px;border:1px solid #c8c7c1;margin:32px 0}.editor-connection summary{cursor:pointer;font-weight:600}.editor-message{padding:18px;border-left:3px solid #b59662;background:#f1ede4}.editor-preview{padding:32px;border:1px solid #b59662;margin:32px 0;overflow-wrap:anywhere}.editor-post{display:block;text-align:left;width:100%;padding:18px;background:none;border:0;border-bottom:1px solid #c8c7c1;font:inherit;cursor:pointer}.judgment-workspace button:disabled{opacity:.6;cursor:wait}@media(max-width:600px){.editor-fields{grid-template-columns:1fr}.editor-preview{padding:20px}}
 
-/* Inner pages use a complete monogram rather than the homepage's split placement. */
-body:not(:has(.editorial-hero)) header::before{display:none}
-body:not(:has(.editorial-hero)) main{position:relative;isolation:isolate}
-body:not(:has(.editorial-hero)) main::before{content:'';position:absolute;top:32px;right:4%;width:clamp(220px,38vw,520px);aspect-ratio:3/4;background:url('/ms-monogram-watermark.png') center/contain no-repeat;opacity:.08;pointer-events:none;z-index:-1}
-@media(max-width:600px){body:not(:has(.editorial-hero)) main::before{top:24px;right:4%;width:65%;max-width:280px;opacity:.05}}
