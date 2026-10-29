@@ -23,7 +23,7 @@ jobs:
       - uses: actions/configure-pages@v5
       - run: node scripts/build-pages.mjs
         env:
-          PAGES_BASE_PATH: /mslawfirm
+          PAGES_BASE_PATH: ''
       - uses: actions/upload-pages-artifact@v3
         with:
           path: work/github-pages/out
