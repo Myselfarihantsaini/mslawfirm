@@ -31,17 +31,17 @@ export const practices = [
     "engagement": "An initial enquiry helps determine whether the practice can assist. The scope of work, professional arrangements and any further document exchange are confirmed separately. Sending an enquiry does not establish an advocate\u2013client relationship."
   },
   {
-    "title": "CAT",
+    "title": "Central Administrative Tribunal (CAT)",
     "slug": "cat",
     "confirmed": true,
-    "description": "Initial assessment of CAT-related enquiries, supporting records and procedural questions. Please share a brief outline so the scope of assistance can be confirmed.",
-    "overview": "Please identify the tribunal or authority referred to as CAT when making an enquiry. The intended expansion of this practice heading remains to be confirmed. Any further assessment depends on the forum, the subject of the dispute and the supporting records.",
+    "description": "Considered guidance and assessment on Central Administrative Tribunal (CAT) matters, service jurisprudence, and procedural remedies for public servants.",
+    "overview": "The practice examines service disputes, administrative orders, and departmental representations concerning central government and institutional personnel. Initial review focuses on the impugned order, statutory remedies exhausted, and applicable limitation periods before the Tribunal.",
     "assessment": [
-      "The full name of the tribunal or authority referred to as CAT",
-      "The decision or action giving rise to the enquiry",
-      "Relevant correspondence, orders and procedural history"
+      "The impugned administrative order or rejection of representation",
+      "Service records, seniority lists, and departmental appeal history",
+      "Statutory limitation period and jurisdiction of the Tribunal bench"
     ],
-    "preparation": "Prepare a brief chronology, identify the parties involved and note any dates mentioned in official correspondence or orders. Keep the relevant documents available for a later, agreed review. Do not upload confidential records through the general enquiry form.",
+    "preparation": "Prepare a brief chronology, identify the department involved and note any dates mentioned in official correspondence or orders. Keep the relevant documents available for a later, agreed review. Do not upload confidential records through the general enquiry form.",
     "engagement": "An initial enquiry helps determine whether the practice can assist. The scope of work, professional arrangements and any further document exchange are confirmed separately. Sending an enquiry does not establish an advocate\u2013client relationship."
   },
   {

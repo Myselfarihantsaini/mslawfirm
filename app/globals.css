@@ -138,3 +138,324 @@ header{overflow:visible;z-index:50}header::before{clip-path:inset(0);max-height:
 header{overflow:hidden}header::before{height:600px;max-height:none;background-position:center;clip-path:none}
 @media(max-width:900px){header .mobile nav{position:fixed;top:108px;right:5%;max-height:70vh;overflow:auto}header::before{height:600px;max-height:none;background-position:center}}
 @media(max-width:600px){header::before{display:none}.editorial-hero::before{top:-60px!important;right:-20%!important;width:90%!important;height:410px;opacity:.09!important}}
+
+
+/* ==========================================================================
+   Editorial Typography & Readability Enhancements
+   ========================================================================== */
+
+/* Base & Header Navigation */
+body {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+header > nav {
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.3px !important;
+  gap: 28px !important;
+}
+
+header > nav a {
+  padding: 6px 0;
+  transition: color 0.15s ease;
+}
+
+header > nav a:hover {
+  color: var(--gold);
+}
+
+.brand {
+  font-size: 18px !important;
+}
+
+.brand small {
+  font-size: 11px !important;
+  letter-spacing: 2px !important;
+  color: #687385 !important;
+}
+
+/* Eyebrows & Section Headings */
+.eyebrow,
+.hero .eyebrow,
+.approach .eyebrow,
+.contact-band .eyebrow,
+.statute-label {
+  font-size: 12px !important;
+  letter-spacing: 2.4px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+}
+
+/* Hero Typography */
+.hero-intro p {
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+  color: #dce3eb !important;
+}
+
+.hero-intro a {
+  font-size: 15px !important;
+  font-weight: 500 !important;
+}
+
+.image-caption {
+  font-size: 12px !important;
+  letter-spacing: 2px !important;
+  font-weight: 500 !important;
+}
+
+/* Action Buttons & Links */
+.button {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  padding: 14px 28px !important;
+  letter-spacing: 0.3px;
+}
+
+.text-link {
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  padding-bottom: 4px !important;
+  border-bottom: 1.5px solid #9d8d6b !important;
+}
+
+/* Advocate About & Qualifications */
+.about p {
+  font-size: 16px !important;
+  line-height: 1.85 !important;
+}
+
+.advocate-frame figcaption span {
+  font-size: 26px !important;
+}
+
+.advocate-frame figcaption small {
+  font-size: 12px !important;
+  letter-spacing: 2px !important;
+  font-weight: 600 !important;
+  color: #687385 !important;
+}
+
+.qualifications {
+  font-size: 16px !important;
+  line-height: 1.9 !important;
+}
+
+.qualifications span {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: #8b713b !important;
+}
+
+/* Practice Gallery */
+.practice-gallery .section-head h2 {
+  font-size: 42px !important;
+  line-height: 1.18 !important;
+}
+
+.practice-gallery .section-head > p {
+  font-size: 16px !important;
+  line-height: 1.8 !important;
+  color: #556070 !important;
+}
+
+.practice-gallery .practice-rows h3 {
+  font-size: 26px !important;
+  line-height: 1.25 !important;
+}
+
+.practice-gallery .practice-copy > p {
+  font-size: 15px !important;
+  line-height: 1.8 !important;
+  color: #4e5a6a !important;
+}
+
+.practice-card-points {
+  font-size: 14px !important;
+  line-height: 1.75 !important;
+  color: #4e5a6a !important;
+}
+
+.practice-gallery .number {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  letter-spacing: 1.5px !important;
+}
+
+.practice-detail {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  letter-spacing: 1.2px !important;
+}
+
+/* Professional Approach (Pillars) */
+.pillars h3 {
+  font-size: 24px !important;
+  line-height: 1.25 !important;
+}
+
+.pillars p {
+  font-size: 15px !important;
+  line-height: 1.75 !important;
+  color: #cbd5e1 !important;
+}
+
+.pillars .number {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+
+/* Knowledge & Empty States */
+.empty-state p {
+  font-size: 32px !important;
+  line-height: 1.35 !important;
+}
+
+.empty-state span {
+  font-size: 16px !important;
+  line-height: 1.8 !important;
+  color: #556070 !important;
+}
+
+/* Subpages & Prose */
+.prose p {
+  font-size: 16px !important;
+  line-height: 1.85 !important;
+  color: #283344 !important;
+}
+
+.prose .lead {
+  font-size: 20px !important;
+  line-height: 1.7 !important;
+}
+
+.prose h2 {
+  font-size: 28px !important;
+  line-height: 1.25 !important;
+  margin-top: 40px !important;
+  margin-bottom: 16px !important;
+}
+
+.prose .practice-points li {
+  font-size: 16px !important;
+  line-height: 1.75 !important;
+}
+
+.statute-callout p {
+  font-size: 15px !important;
+  line-height: 1.75 !important;
+}
+
+/* Contact Page Structure & Form */
+.contact-chambers-card {
+  background: #ffffff;
+  border: 1px solid #e2ded5;
+  padding: 32px;
+  border-radius: 2px;
+}
+
+.contact-chambers-subtitle {
+  font-size: 16px !important;
+  color: #556070;
+  margin-bottom: 24px !important;
+}
+
+.contact-method-group {
+  margin-bottom: 18px;
+}
+
+.contact-method-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #8b713b;
+  margin-bottom: 4px;
+}
+
+form label {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #101d32 !important;
+}
+
+input, select, textarea {
+  font-size: 15px !important;
+  padding: 14px !important;
+  line-height: 1.5 !important;
+}
+
+.consent {
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  color: #444 !important;
+}
+
+/* Footer Readability */
+footer {
+  font-size: 15px !important;
+  line-height: 1.85 !important;
+}
+
+footer .footer-brand {
+  font-size: 30px !important;
+  line-height: 1.35 !important;
+}
+
+footer small {
+  font-size: 15px !important;
+  color: #556070 !important;
+}
+
+footer a {
+  font-size: 15px !important;
+  padding: 4px 0 !important;
+}
+
+.footer-contact {
+  font-size: 15px !important;
+  line-height: 2 !important;
+}
+
+.footer-bottom {
+  font-size: 14px !important;
+}
+
+.footer-bottom a {
+  font-size: 14px !important;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-connect {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  header > nav {
+    display: none !important;
+  }
+  .mobile summary {
+    font-size: 15px !important;
+  }
+  .mobile nav a {
+    font-size: 16px !important;
+    padding: 14px 12px !important;
+  }
+  .hero-intro p {
+    font-size: 16px !important;
+  }
+  .practice-gallery .section-head h2 {
+    font-size: 36px !important;
+  }
+  .practice-gallery .practice-rows h3 {
+    font-size: 24px !important;
+  }
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}
