@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "id": "1",
+    "title": "Dashrathbhai Trikambhai Patel v. Hitesh Mahendrabhai Patel & Anr.",
+    "court": "Supreme Court of India",
+    "date": "2022-10-11",
+    "citation": "(2023) 1 SCC 578",
+    "sourceUrl": "https://main.sci.gov.in/supremecourt/2019/37989/37989_2019_9_1501_38795_Judgement_11-Oct-2022.pdf",
+    "author": "Adv. Bhavesh Saini",
+    "category": "Commercial & Negotiable Instruments",
+    "publishedDate": "2026-10-29",
+    "summary": "For maintaining an offense under Section 138 of the Negotiable Instruments Act, 1881, the cheque must represent an existing legally enforceable debt on the date of presentation. If part-payment is made and endorsed on the cheque, the drawer cannot be prosecuted for dishonour of the original face value.",
+    "body": "The Supreme Court of India examined the interplay between Section 138 and Section 56 of the Negotiable Instruments Act, 1881. The Court held that where a borrower makes part-payment towards a loan after the issuance of a cheque, the payee is obligated under Section 56 to endorse the part-payment on the instrument prior to presentation.\n\nIf the cheque is presented for the full amount without such endorsement, the statutory notice of demand claiming the entire face value becomes legally flawed. Consequently, criminal proceedings under Section 138 cannot be sustained for the unadjusted amount.",
+    "status": "published"
+  },
+  {
+    "id": "2",
+    "title": "M/s Haryana State Co-operative v. Union of India & Ors.",
+    "court": "High Court of Punjab and Haryana",
+    "date": "2023-04-18",
+    "citation": "2023 PHHC 054123",
+    "sourceUrl": "https://highcourtchd.gov.in/",
+    "author": "Adv. Bhavesh Saini",
+    "category": "GST & Tax Jurisprudence",
+    "publishedDate": "2026-10-29",
+    "summary": "Clarifying the statutory scope of input tax credit (ITC) eligibility under Section 16 of the Central Goods and Services Tax (CGST) Act, 2017, and reconciling procedural mismatches between supplier returns and purchaser credit ledgers.",
+    "body": "The Division Bench of the High Court examined petitions challenging the denial of Input Tax Credit (ITC) due to procedural mismatch between supplier returns and purchaser credit ledgers.\n\nThe Court observed that genuine purchasing dealers who have paid the tax to registered suppliers cannot be penalized merely due to procedural delays or default on the part of selling dealers when the bona fides of the transaction, tax invoices, and bank payment records are established.",
+    "status": "published"
+  }
+]

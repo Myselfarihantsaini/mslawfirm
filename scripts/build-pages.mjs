@@ -38,7 +38,7 @@ writeFileSync(
 update('app/sections.js',s=>s
   .replace(/import \{list\}[^\n]*\n/,'')
   .replace(/import \{connection\}[^\n]*\n/,'')
-  .replace("export async function Judgments(){await connection();const judgments=list('posts').filter(p=>p.status==='published');return","export function Judgments(){return")
+  .replace(/export async function Judgments\(\)\s*\{\s*await connection\(\);\s*const judgments\s*=\s*list\('posts'\)\.filter\(p\s*=>\s*p\.status\s*===\s*'published'\);\s*return/,'export function Judgments(){return')
   .replace(/<h3><a href=\{['"]\/judgments\/['"]\+j\.id\}>\{j\.title\}<\/a><\/h3>/g,'<h3><a href={/^https:\\/\\//i.test(j.sourceUrl)?j.sourceUrl:\'#\'} target="_blank" rel="noopener noreferrer">{j.title} ↗</a></h3>')
   .replace('<p>{j.summary}</p>','<p>{j.summary}</p><div className="article-body">{(j.body||"").split(/\\n\\s*\\n/).map((text,i)=><p key={i}>{text}</p>)}</div>')
   .replace('<a className="text-link judgment-read" href={\'/judgments/\'+j.id}>Read case note ↗</a>','')
@@ -60,7 +60,7 @@ update('app/content.js',s=>s.replace('export const judgments = [];','export cons
 update('app/contact/page.js',s=>s.replace('enabled={true}','enabled={false}'));
 update('app/[page]/page.js',s=>s+`\nexport function generateStaticParams(){return [...['about','practice-areas','legal-knowledge','judgments','privacy-policy','legal-disclaimer'],...practices.map(p=>p.slug),...draftArticles.map(p=>p.slug)].map(page=>({page}))}\n`);
 update('app/robots.js',s=>"export const dynamic='force-static';\n"+s);
-update('app/sitemap.js',()=>"export const dynamic='force-static';\nexport default function sitemap(){return []}\n");
+update('app/sitemap.js',s=>"export const dynamic='force-static';\n"+s);
 writeFileSync(path.join(dir,'next.config.mjs'),"export default {output:'export',trailingSlash:true,images:{unoptimized:true},poweredByHeader:false,basePath:process.env.PAGES_BASE_PATH||''};\n");
 
 const base=process.env.PAGES_BASE_PATH||'';

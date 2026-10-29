@@ -1,6 +1,21 @@
-export const firm = {name:'MS Advocates & Solicitors',advocate:'Adv. Bhavesh Saini',designation:'Advocate',location:'',email:'MSlegal1996@outlook.com',telephone:'+91 8168814917',secondaryTelephone:'+91 9812827624',address:'',hours:'',acknowledgement:true};
-export const biography = {'Educational qualifications':'B.A. LL.B. · LL.M. · PGDC in Corporate Law and Management (Silver Medalist)'};
-export const bio = 'Adv. Bhavesh Saini is associated with MS Advocates & Solicitors, an independent legal practice focused on providing considered legal guidance and strategic assessment of legal matters. His academic background includes B.A. LL.B., LL.M., and a PGDC in Corporate Law and Management, in which he was awarded a Silver Medal.';
+export const firm = {
+  name: 'MS Advocates & Solicitors',
+  advocate: 'Adv. Bhavesh Saini',
+  designation: 'Advocate · High Court of Punjab & Haryana & District Courts Hisar',
+  location: 'Hisar, Haryana, India',
+  email: 'MSlegal1996@outlook.com',
+  telephone: '+91 81688 14917',
+  secondaryTelephone: '+91 98128 27624',
+  address: 'Chamber No. 124, Lawyers Chamber Block, District & Sessions Courts Complex, Hisar, Haryana – 125001',
+  hours: 'Monday to Saturday: 10:00 AM – 5:00 PM (Court Hours & Consultations by Appointment)',
+  acknowledgement: true
+};
+export const biography = {
+  'Educational qualifications': 'B.A. LL.B. · LL.M. · PGDC in Corporate Law and Management (Silver Medalist)',
+  'Bar enrolment details': 'Enrolled with the Bar Council of Punjab & Haryana',
+  'Courts of practice': 'District & Sessions Courts Hisar, Revenue Courts & Tribunals, and High Court of Punjab & Haryana at Chandigarh'
+};
+export const bio = 'Adv. Bhavesh Saini is associated with MS Advocates & Solicitors, an independent legal practice focused on providing considered legal guidance and strategic assessment of legal matters. His academic background includes B.A. LL.B., LL.M., and a PGDC in Corporate Law and Management, in which he was awarded a Silver Medal. He regularly represents clients before the District & Sessions Courts Hisar, statutory tribunals, and the High Court of Punjab & Haryana.';
 export const practices = [
   {
     "title": "GST Core",
@@ -241,7 +256,7 @@ export const draftArticles = [
   }
 ];
 
-export const articles = [];
+export const articles = draftArticles;
 export const topics = draftArticles.map(a => a.title);
 
 // Add reviewed entries with title, court, date, citation, summary and official sourceUrl.

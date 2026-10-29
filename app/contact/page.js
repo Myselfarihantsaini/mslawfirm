@@ -22,6 +22,14 @@ export default function Contact(){
             <span className="contact-method-label">Secondary Telephone</span>
             <a className="text-link" href="tel:+919812827624">+91 98128 27624</a>
           </div>
+          <div className="contact-method-group">
+            <span className="contact-method-label">Chambers Address</span>
+            <p style={{margin:0,fontSize:'15px',color:'#2c3644',lineHeight:'1.6'}}>{firm.address}</p>
+          </div>
+          <div className="contact-method-group">
+            <span className="contact-method-label">Consultation Hours</span>
+            <p style={{margin:0,fontSize:'15px',color:'#2c3644',lineHeight:'1.6'}}>{firm.hours}</p>
+          </div>
           <p className="muted" style={{marginTop:'32px',lineHeight:'1.7'}}>
             Initial communication is handled in strict accordance with professional standards. Please avoid sharing confidential documents prior to engagement.
           </p>
