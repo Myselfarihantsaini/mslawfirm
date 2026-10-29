@@ -6,7 +6,7 @@
     "dev": "next dev --hostname 127.0.0.1",
     "build": "next build --webpack",
     "start": "next start --hostname 127.0.0.1",
-    "test": "node checks/enquiry.mjs"
+    "test": "node checks/enquiry.mjs && node checks/judgments.mjs"
   },
   "dependencies": {
     "@tailwindcss/postcss": "latest",
