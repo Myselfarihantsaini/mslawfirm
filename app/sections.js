@@ -95,7 +95,7 @@ export async function Judgments(){
           <p className="eyebrow">CASE LAW & JUDICIAL DEVELOPMENTS</p>
           <h2>Judgments</h2>
         </div>
-        <p>A considered reading of judicial decisions, with references to the original court records.</p>
+        
       </div>
       {judgments.length?(
         <div className="judgment-list">
