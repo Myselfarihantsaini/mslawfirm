@@ -24,7 +24,6 @@ export function About(){
         <div className="advocate-meta" style={{margin:'24px 0',fontSize:'14px',lineHeight:'1.8',color:'#2c3644'}}>
           <p style={{margin:'6px 0'}}><strong>Bar Enrolment:</strong> {biography['Bar enrolment details']}</p>
           <p style={{margin:'6px 0'}}><strong>Courts of Practice:</strong> {biography['Courts of practice']}</p>
-          <p style={{margin:'6px 0'}}><strong>Chamber Office:</strong> {firm.address}</p>
         </div>
         <a className="text-link" href="/contact">Enquire with chambers ↗</a>
       </div>

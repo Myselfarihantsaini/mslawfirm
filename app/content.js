@@ -6,7 +6,6 @@ export const firm = {
   email: 'MSlegal1996@outlook.com',
   telephone: '+91 81688 14917',
   secondaryTelephone: '+91 98128 27624',
-  address: 'Chamber No. 124, Lawyers Chamber Block, District & Sessions Courts Complex, Hisar, Haryana – 125001',
   hours: 'Monday to Saturday: 10:00 AM – 5:00 PM (Court Hours & Consultations by Appointment)',
   acknowledgement: true
 };
